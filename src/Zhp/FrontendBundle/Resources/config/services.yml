@@ -1,0 +1,4 @@
+services:
+#    zhp_frontend.example:
+#        class: Zhp\FrontendBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
