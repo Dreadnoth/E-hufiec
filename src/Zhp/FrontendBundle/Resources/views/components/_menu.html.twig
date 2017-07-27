@@ -1,3 +1,17 @@
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="loginmodal-container">
+            <h1>Logowanie do konta</h1><br>
+            <form>
+                <input type="text" name="user" placeholder="Adres e-mail">
+                <input type="password" name="pass" placeholder="Hasło">
+                <input type="submit" name="login" class="login loginmodal-submit" value="Logowanie">
+            </form>
+        </div>
+    </div>
+</div>
+
+
 <nav class="navbar navbar-findcond navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -11,14 +25,18 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Profil</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#exit">Wyloguj</a></li>
-                    </ul>
-                </li>
+                {% if app.user %}
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admin <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Profil</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#exit">Wyloguj</a></li>
+                        </ul>
+                    </li>
+                {% else %}
+                    <li class="active"><a href="#" data-toggle="modal" data-target="#login-modal">Zaloguj</a></li>
+                {% endif %}
             </ul>
             <form class="navbar-form navbar-right search-form" role="search">
                 <input type="text" class="form-control" placeholder="Search" />
