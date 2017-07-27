@@ -1,0 +1,22 @@
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th>Nazwa</th>
+        <th>Jednostka</th>
+        <th>Status akceptacji</th>
+        <th>Status wpłat</th>
+        <th>Status rozliczenia</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for zbiorka in zbiorki %}
+        <tr>
+            <td>{{ zbiorka.nazwa }}</td>
+            <td>{{ zbiorka.jednostka.nazwa }}</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
