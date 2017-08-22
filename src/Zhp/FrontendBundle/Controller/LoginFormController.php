@@ -17,10 +17,6 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class LoginFormController extends Controller
 {
 
-    public function renderAction() {
-        return $this->render('@ZhpFrontend/Partials/login_form_partial.html.twig');
-    }
-
     /**
      * @Route("/login",name="login")
      * @param Request $request
