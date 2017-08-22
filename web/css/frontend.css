@@ -111,3 +111,8 @@ nav.navbar-findcond span.badge.new { background: rgba(255, 0, 0, 0.8); color: #f
 .login-help{
     font-size: 12px;
 }
+
+.push-to-bottom {
+    position: absolute;
+    bottom: 50px;
+}

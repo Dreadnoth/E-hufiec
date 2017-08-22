@@ -1,17 +1,3 @@
-<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog">
-        <div class="loginmodal-container">
-            <h1>Logowanie do konta</h1><br>
-            <form>
-                <input type="text" name="user" placeholder="Adres e-mail">
-                <input type="password" name="pass" placeholder="Hasło">
-                <input type="submit" name="login" class="login loginmodal-submit" value="Logowanie">
-            </form>
-        </div>
-    </div>
-</div>
-
-
 <nav class="navbar navbar-findcond navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -35,7 +21,7 @@
                         </ul>
                     </li>
                 {% else %}
-                    <li class="active"><a href="#" data-toggle="modal" data-target="#login-modal">Zaloguj</a></li>
+                    <li class="active"><a href="{{ path('login') }}">Zaloguj</a></li>
                 {% endif %}
             </ul>
             <form class="navbar-form navbar-right search-form" role="search">
