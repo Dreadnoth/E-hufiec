@@ -1,11 +1,16 @@
 # To get started with security, check out the documentation:
 # https://symfony.com/doc/current/security.html
 security:
+    encoders:
+        Zhp\BackendBundle\Entity\Operator:
+            algorithm: bcrypt
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
-        in_memory:
-            memory: ~
+        db_provider:
+            entity:
+              class: ZhpBackendBundle:Operator
+              property: email
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -15,9 +20,26 @@ security:
 
         main:
             anonymous: ~
+            logout:
+                path:   /logout
+                target: homepage
             form_login:
                 login_path: login
                 check_path: login
+                csrf_token_generator: security.csrf.token_manager
+                default_target_path: homepage
+            remember_me:
+                secret:   '%secret%'
+                lifetime: 604800 # 1 week in seconds
+                path:     /
+
+    role_hierarchy:
+        ROLE_ADMIN: ROLE_USER,ROLE_ZBIORKI
+        ROLE_ZBIORKI: ROLE_USER
+
+    access_control:
+        - {path: ^/dashboard, roles: ROLE_USER}
+        - {path: ^/dashboard/zbiorki, roles: ROLE_ZBIORKI}
             # activate different ways to authenticate
 
             # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate

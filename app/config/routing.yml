@@ -1,4 +1,11 @@
+zhp_dashboard:
+    resource: "@ZhpDashboardBundle/Controller/"
+    type:     annotation
+    prefix:   /dashboard
+
 zhp_frontend:
     resource: "@ZhpFrontendBundle/Controller/"
     type:     annotation
     prefix:   /
+logout:
+    path: /logout
