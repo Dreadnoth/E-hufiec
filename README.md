@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/Dreadnoth/E-hufiec.png?label=ready&title=Ready)](https://waffle.io/Dreadnoth/E-hufiec?utm_source=badge)
 E-hufiec
 ==========
 
