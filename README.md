@@ -1,6 +1,5 @@
 [![Stories in Ready](https://badge.waffle.io/Dreadnoth/E-hufiec.png?label=ready&title=Ready)](https://waffle.io/Dreadnoth/E-hufiec?utm_source=badge)
-
-[![Build status](https://circleci.com/gh/Dreadnotg/E-hufiec.svg?style=shield)](https://circleci.com/gh/Dreadnoth/E-hufiec)
+[![Build status](https://circleci.com/gh/Dreadnoth/E-hufiec.svg?style=shield)](https://circleci.com/gh/Dreadnoth/E-hufiec)
 
 E-hufiec
 ==========
