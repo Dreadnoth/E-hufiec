@@ -9,13 +9,14 @@
 namespace Zhp\BackendBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Class Operator
  * @package Zhp\BackendBundle\Entity
  * @ORM\Entity
  */
-class Operator
+class Operator implements UserInterface
 {
     /**
      * @var
@@ -29,6 +30,11 @@ class Operator
      * @ORM\Column(type="string")
      */
     private $email;
+
+    /**
+     * @ORM\Column(type="string", length=64)
+     */
+    private $password;
 
     /**
      * @ORM\ManyToOne(targetEntity="Zhp\BackendBundle\Entity\Jednostka")
@@ -147,9 +153,33 @@ class Operator
     /**
      * @return mixed
      */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+    public function getRolesCollection() {
+        return $this->roles;
+    }
+
+    /**
+     * @return mixed
+     */
     public function getRoles()
     {
-        return $this->roles;
+        $roleArray = array();
+        foreach($this->getRolesCollection() as $role) {
+            $roleArray[] = $role->getName();
+        }
+        return $roleArray;
     }
 
     /**
@@ -158,5 +188,38 @@ class Operator
     public function setRoles($roles)
     {
         $this->roles = $roles;
+    }
+
+    /**
+     * Returns the salt that was originally used to encode the password.
+     *
+     * This can return null if the password was not encoded using a salt.
+     *
+     * @return string|null The salt
+     */
+    public function getSalt()
+    {
+        return null;
+    }
+
+    /**
+     * Returns the username used to authenticate the user.
+     *
+     * @return string The username
+     */
+    public function getUsername()
+    {
+        return $this->getEmail();
+    }
+
+    /**
+     * Removes sensitive data from the user.
+     *
+     * This is important if, at any given point, sensitive information like
+     * the plain-text password is stored on this object.
+     */
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
     }
 }

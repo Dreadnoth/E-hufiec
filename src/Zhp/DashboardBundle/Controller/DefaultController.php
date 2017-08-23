@@ -1,6 +1,6 @@
 <?php
 
-namespace Zhp\FrontendBundle\Controller;
+namespace Zhp\DashboardBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -8,10 +8,10 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/")
      */
     public function indexAction()
     {
-        return $this->render('ZhpFrontendBundle:Default:index.html.twig');
+        return $this->render('ZhpDashboardBundle:Default:index.html.twig');
     }
 }
