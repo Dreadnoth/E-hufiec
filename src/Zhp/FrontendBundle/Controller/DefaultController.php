@@ -12,6 +12,6 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('ZhpFrontendBundle:Default:index.html.twig');
+        return $this->redirectToRoute("login");
     }
 }
