@@ -7,9 +7,16 @@ E-hufiec
 
 ## Wsparcie IT dla ZHP
 Trwają obecnie prace nad następującymi modułami:
-1. Moduł zbiórek publicznych
-2. Moduł konfiguracji aplikacji
-3. Moduł administracyjny
+1.	Moduł zbiórek publicznych
+2.	Zgłoszenia i akceptacja zbiórek
+3.	Rejestracja wpłat
+4.	Rejestracja faktur wg kategorii
+5.	Moduł konfiguracji aplikacji
+6.	Moduł administracyjny
+
+W planach (bardziej lub mniej odległych):
+1.	Moduł do obsługi prac Sztabu WOŚP
+2.	Moduł do zgłoszeń wyjść i biwaków
 
 ## Wymagania
 Serwer wraz z:
