@@ -6,7 +6,8 @@
         "psr-4": {
             "Zhp\\FrontendBundle\\": "src/Zhp/FrontendBundle",
             "Zhp\\BackendBundle\\": "src/Zhp/BackendBundle",
-            "Zhp\\DashboardBundle\\": "src/Zhp/DashboardBundle"
+            "Zhp\\DashboardBundle\\": "src/Zhp/DashboardBundle",
+            "Zhp\\ZbiorkiBundle\\": "src/Zhp/ZbiorkiBundle"
         },
         "classmap": [
             "app/AppKernel.php",

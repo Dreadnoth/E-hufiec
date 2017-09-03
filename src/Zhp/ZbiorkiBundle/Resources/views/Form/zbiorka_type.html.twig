@@ -1,0 +1,36 @@
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+<script type="text/javascript">
+    (function(jq){
+        jq("#zbiorka_operatorJakoOpiekun").change(function () {
+
+            const imie = jq("#zbiorka_imieOsobyOdpowiedzialnej");
+            const nazwisko = jq("#zbiorka_nazwiskoOsobyOdpowiedzialnej");
+            const telefon = jq("#zbiorka_telefonOsobyOdpowiedzialnej");
+
+            var elems = [imie, nazwisko, telefon];
+
+            if(this.checked) {
+                elems.forEach(function (item, index, arr) { item.prop("disabled", true) });
+                jq.ajax({
+                        url: "{{ path('zhp_zbiorki_get_personal_info') }}",
+                        success: function (data) {
+                            for (var prop in data['data']) {
+                                if(data['data'].hasOwnProperty(prop)) {
+                                   elems.forEach(function (item, index, arr) {
+                                       if(item.attr('id') === ("zbiorka_" + prop + "OsobyOdpowiedzialnej")){
+                                            item.val(data['data'][prop]);
+                                       }
+                                   })
+                                }
+                            }
+                        }
+                    })
+            } else {
+                elems.forEach(function (item, index, arr) { item.prop("disabled", false) })
+            }
+        })
+    })(window.$)
+</script>

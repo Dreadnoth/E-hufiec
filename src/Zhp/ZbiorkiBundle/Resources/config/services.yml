@@ -1,0 +1,4 @@
+services:
+#    zhp_zbiorki.example:
+#        class: Zhp\ZbiorkiBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

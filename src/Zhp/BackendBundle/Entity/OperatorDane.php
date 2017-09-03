@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Class OperatorDane
  * @package Zhp\BackendBundle\Entity
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="Zhp\BackendBundle\Repository\OperatorDaneRepository")
  */
 class OperatorDane
 {
@@ -138,4 +138,11 @@ class OperatorDane
     {
         $this->telefon = $telefon;
     }
+
+    public function __toString()
+    {
+        return "OperatorDane{imie: \"" .$this->getImie() . "\", nazwisko: \"" .$this->getNazwisko() ."\", telefon: \"" .$this->getTelefon() . "\"}";
+    }
+
+
 }
