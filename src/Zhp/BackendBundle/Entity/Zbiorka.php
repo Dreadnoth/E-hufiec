@@ -71,6 +71,11 @@ class Zbiorka
      */
     private $czasTrwaniaDo;
 
+
+    /**
+     * @ORM\OneToOne(targetEntity="Zhp\BackendBundle\Entity\ZbiorkaOsobaOdpowiedzialna", mappedBy="zbiorka")
+     */
+    private $osobaOdpowiedzialna;
     /**
      * @var
      * @ORM\OneToOne(targetEntity="Zhp\BackendBundle\Entity\ZbiorkaUwagi", mappedBy="zbiorka")

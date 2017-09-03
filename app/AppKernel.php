@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Zhp\FrontendBundle\ZhpFrontendBundle(),
             new Zhp\BackendBundle\ZhpBackendBundle(),
             new Zhp\DashboardBundle\ZhpDashboardBundle(),
+            new Zhp\ZbiorkiBundle\ZhpZbiorkiBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

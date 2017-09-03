@@ -1,3 +1,8 @@
+zhp_zbiorki:
+    resource: "@ZhpZbiorkiBundle/Controller/"
+    type:     annotation
+    prefix:   /dashboard/zbiorki
+
 zhp_dashboard:
     resource: "@ZhpDashboardBundle/Controller/"
     type:     annotation
