@@ -1,7 +1,7 @@
 Instrukcja wdrożenia na potrzeby prac deweloperskich
 ==========
 
-##Założenia przedwstępne
+## Założenia przedwstępne
 Instrukcja zakłada że na komputerze docelowym jest zainstalowany i skonfigurowany:
  * serwer http (przydatny [link](http://symfony.com/doc/current/setup/web_server_configuration.html))
  * parser php w wersji 7
@@ -9,7 +9,7 @@ Instrukcja zakłada że na komputerze docelowym jest zainstalowany i skonfigurow
  * klient [git](https://git-scm.com/)
  * [composer](https://getcomposer.org/)
 
-##Instalacja
+## Instalacja
 1. Pobieramy kopię repozytorium na dysk:
     ```bash
     $ git clone https://github.com/Dreadnoth/E-hufiec.git
@@ -45,7 +45,7 @@ Instrukcja zakłada że na komputerze docelowym jest zainstalowany i skonfigurow
 6. Jeżeli wszystko przebiegło pomyślnie po przejściu w przeglądarce pod adres *http://localhost/[Sciezka_do_E-hufiec]/web/app_dev.php* powinna pokazać się strona logowania. Domyślne dane do logowania to: login - admin@example.com, hasło: admin
 7. W przypadku systemów Linux wymagane mogą być dodatkowe kroki opisane [tutaj](https://symfony.com/doc/current/setup/file_permissions.html)
 
-#Tworzenie poprawek
+# Tworzenie poprawek
 Jeżeli chcemy aby nasza poprawka znalazła się w repozytorium głównym postępujemy wg następujących kroków:
 1. Zakładamy darmowe konto na [github.com](https://github.com/)
 2. Przechodzimy pod [https://github.com/Dreadnoth/E-hufiec](https://github.com/Dreadnoth/E-hufiec)

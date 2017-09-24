@@ -24,5 +24,8 @@ Serwer wraz z:
 * PHP 7
 * Mysql 5
 
+## Intrukcja intstalacji
+Instrukcja dostępna [tutaj](https://github.com/Dreadnoth/E-hufiec/blob/master/LOCAL_DEV.md)
+
 ## Autorzy
 Karolina Chrobok, Łukasz Czyrny
