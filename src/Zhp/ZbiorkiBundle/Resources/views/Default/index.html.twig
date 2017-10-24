@@ -1,5 +1,55 @@
-{% extends '::base_user_dashboard.html.twig' %}
+{% extends '@ZhpZbiorki/base_zbiorka_dashboard.html.twig' %}
 
-{% block body %}
-Hello world
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Moje zbiórki
+                </div>
+                <div class="panel-body">
+                    <table id="table_id" class="display">
+                        <thead>
+                        <tr>
+                            <th>Identyfikator zbiórki</th>
+                            <th>Nazwa zbiórki</th>
+                            <th>Status</th>
+                            <th>Akcje</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Test</td>
+                            <td>Row 1 Data 1</td>
+                            <td>Row 1 Data 2</td>
+                            <td><a href="#">Pokaż</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            Dupa
+        </div>
+        <div class="col-md-6">
+            Dupa
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $(document).ready(function () {
+            $('#table_id').DataTable({
+                serverSide: true,
+                ajax: {
+                    url: '{{ path('zhp_zbiorki_ajaxhelper_myfundraisings') }}',
+                    type: 'POST'
+                }
+            });
+        })
+    </script>
 {% endblock %}

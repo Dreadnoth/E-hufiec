@@ -10,6 +10,7 @@
     {% block stylesheets %}{% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     <script src="{{ asset('js/jquery/jquery-3.2.1.min.js') }}"></script>
+    {% block head_javascripts %}{% endblock %}
 </head>
 <body>
 {% include(":Component:_user_dashboard_menu.html.twig") %}

@@ -1,0 +1,53 @@
+{% extends '::base_user_dashboard.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/zbiorki/main.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/jquery.dataTables.min.css') }}" />
+{% endblock %}
+
+{% block head_javascripts %}
+    <script src="{{ asset('js/chart.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
+    <script>
+        $.extend( $.fn.dataTable.defaults, {
+            language: {
+                "decimal":        "",
+                "emptyTable":     "Brak danych",
+                "info":           "Pokazuję od _START_ do _END_ z _TOTAL_ wpisów",
+                "infoEmpty":      "Pokazuję od 0 do 0 z 0 wpisów",
+                "infoFiltered":   "(filtered from _MAX_ total entries)",
+                "infoPostFix":    "",
+                "thousands":      ",",
+                "lengthMenu":     "Pokazuję _MENU_ wpisów",
+                "loadingRecords": "Ładuję...",
+                "processing":     "Przetwarzam...",
+                "search":         "Szukaj:",
+                "zeroRecords":    "Brak pasujących wpisów",
+                "paginate": {
+                    "first":      "Pierwsza",
+                    "last":       "Ostatnia",
+                    "next":       "Następna",
+                    "previous":   "Poprzednia"
+                },
+                "aria": {
+                    "sortAscending":  ": activate to sort column ascending",
+                    "sortDescending": ": activate to sort column descending"
+                }
+            }
+        } );
+    </script>
+{% endblock %}
+
+{% block body %}
+    {% include 'ZhpZbiorkiBundle:Component:_side_menu.html.twig' %}
+    <div class="container-fluid" id="main-container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-2">
+                <div id="main-content">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
